@@ -20,6 +20,6 @@ This repository is the independently authored public work from packet `ENTERPRIS
 
 - Keep the README the primary experience: business purpose first, concrete synthetic walkthrough, one legible main diagram, inspectable decisions, concise quickstart, and visible scope boundaries.
 - Write short, precise supporting docs with direct relative links. Do not pad the tree with stubs, invented screenshots, decorative galleries, inflated stack choices, or unverified endorsements.
-- Use Python standard library and unittest if available. Tests must exercise changed data/authorization inputs and evidence boundaries, not only a fixed success narrative.
+- Keep examples dependency-free using this repository's Node.js standard library and built-in test runner. Tests must exercise changed data/authorization inputs and evidence boundaries, not only a fixed success narrative.
 - Render Markdown and original SVG diagrams, inspect ordinary and narrow widths, and check links, anchors, filename case, tables, disclosures, and staged public content before publishing.
 - Publication of newly authored public-safe files to `mchenry-power-dev/enterprise-iq` is authorized by the work packet after local validation. Verify identity, remote owner, visibility, history, and rendered result. Preserve existing owner work.
