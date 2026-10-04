@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1320" height="1270" viewBox="0 0 1320 1270" role="img" aria-labelledby="title desc">
+  <title id="title">Authorized question flow using synthetic Enterprise IQ fixtures</title>
+  <desc id="desc">A scoped question passes a fresh synthetic identity and authorization check before permitted evidence is selected. Retrieved text remains untrusted data. Metric dimensions, definition versions, credit inclusion and freshness are checked before a deterministic subtraction explains net versus gross revenue. Unknown identities, stale permissions, incomplete permitted context, incompatible definitions and stale evidence lead to a narrowed or withheld answer. Follow-ups and saved contexts require authorization again.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M 0 0 L 10 5 L 0 10 Z" fill="#52647e"/></marker>
+    <style>
+      text { font-family: Arial, Helvetica, sans-serif; fill: #14243d; }
+      .title { font-size: 31px; font-weight: 700; }
+      .subtitle { font-size: 19px; fill: #52647e; }
+      .label { font-size: 22px; font-weight: 700; }
+      .body { font-size: 19px; }
+      .small { font-size: 17px; fill: #52647e; }
+      .white { fill: #ffffff; }
+      .step { fill: #ffffff; stroke: #c8d0df; stroke-width: 2; }
+      .outcome { fill: #f1f9f8; stroke: #147b76; stroke-width: 2; }
+      .edge { fill: none; stroke: #52647e; stroke-width: 2.5; marker-end: url(#arrow); }
+    </style>
+  </defs>
+
+  <rect width="1320" height="1270" fill="#ffffff"/>
+  <text x="50" y="53" class="title">Authorized question flow · synthetic reference</text>
+  <text x="50" y="88" class="subtitle">Authorization and deterministic evidence checks surround the answer composer.</text>
+
+  <rect x="50" y="121" width="1220" height="79" rx="12" fill="#14243d"/>
+  <text x="75" y="153" class="label white">Why do Finance and Sales show different September revenue?</text>
+  <text x="75" y="183" class="body white">Scope: Aster Manufacturing US · September 2026 · USD · posted US transactions</text>
+
+  <rect x="35" y="226" width="800" height="943" rx="16" fill="#f6f7ff" stroke="#4145b0" stroke-width="2.5" stroke-dasharray="10 7"/>
+  <text x="60" y="257" class="small">AUTHORIZATION + EVIDENCE BOUNDARY · synthetic local behavior</text>
+  <path d="M 435 200 L 435 277" class="edge"/>
+
+  <rect x="60" y="282" width="750" height="96" rx="11" class="step"/>
+  <text x="82" y="318" class="label">1 · Validate identity and authorization freshness</text>
+  <text x="82" y="351" class="body">Known caller + current permission metadata are required before retrieval.</text>
+  <path d="M 435 378 L 435 425" class="edge"/>
+  <path d="M 810 330 L 905 330" class="edge"/>
+  <rect x="905" y="282" width="365" height="96" rx="11" class="outcome"/>
+  <text x="925" y="318" class="label">Unknown or stale?</text>
+  <text x="925" y="351" class="body">Stop before source retrieval.</text>
+
+  <rect x="60" y="425" width="750" height="100" rx="11" class="step"/>
+  <text x="82" y="461" class="label">2 · Select authorized context</text>
+  <text x="82" y="494" class="body">Exclude denied IDs, titles, text and citations before context assembly.</text>
+  <path d="M 435 525 L 435 572" class="edge"/>
+  <path d="M 810 475 L 905 475" class="edge"/>
+  <rect x="905" y="425" width="365" height="100" rx="11" class="outcome"/>
+  <text x="925" y="461" class="label">Allowed context incomplete?</text>
+  <text x="925" y="494" class="body">Do not name denied sources.</text>
+
+  <rect x="60" y="572" width="750" height="100" rx="11" class="step"/>
+  <text x="82" y="608" class="label">3 · Assemble only the selected evidence</text>
+  <text x="82" y="641" class="body">Reports + definition + period note + credits + freshness; text stays data.</text>
+  <path d="M 435 672 L 435 719" class="edge"/>
+  <path d="M 810 622 L 905 622" class="edge"/>
+  <rect x="905" y="572" width="365" height="100" rx="11" class="outcome"/>
+  <text x="925" y="608" class="label">Instructions inside a source?</text>
+  <text x="925" y="641" class="body">They never execute as commands.</text>
+
+  <rect x="60" y="719" width="750" height="100" rx="11" class="step"/>
+  <text x="82" y="755" class="label">4 · Align dimensions and resolve definitions</text>
+  <text x="82" y="788" class="body">Match scope; retain gross v1, credits v1 and the net v2 relationship.</text>
+  <path d="M 435 819 L 435 866" class="edge"/>
+  <path d="M 810 769 L 905 769" class="edge"/>
+  <rect x="905" y="719" width="365" height="100" rx="11" class="outcome"/>
+  <text x="925" y="755" class="label">Mismatch or conflict?</text>
+  <text x="925" y="788" class="body">Keep distinct meanings visible.</text>
+
+  <rect x="60" y="866" width="750" height="100" rx="11" class="step"/>
+  <text x="82" y="902" class="label">5 · Verify evidence and calculate</text>
+  <text x="82" y="935" class="body">$2,000,000 gross − $160,000 period credits = $1,840,000 net.</text>
+  <path d="M 435 966 L 435 1013" class="edge"/>
+  <path d="M 810 916 L 905 916" class="edge"/>
+  <rect x="905" y="866" width="365" height="100" rx="11" class="outcome"/>
+  <text x="925" y="902" class="label">Missing or expired evidence?</text>
+  <text x="925" y="935" class="body">Withhold numeric reconciliation.</text>
+
+  <rect x="60" y="1013" width="750" height="125" rx="11" fill="#147b76"/>
+  <text x="82" y="1049" class="label white">6 · Return a source-linked answer</text>
+  <text x="82" y="1082" class="body white">Different metric definitions explain the allowed figures.</text>
+  <text x="82" y="1115" class="body white">Include source references, exact scope, freshness and evidence caveats.</text>
+  <rect x="905" y="1013" width="365" height="125" rx="11" class="outcome"/>
+  <text x="925" y="1049" class="label">Follow-up or saved context</text>
+  <text x="925" y="1082" class="body">Build a new authorized context.</text>
+  <text x="925" y="1115" class="body">Prior access is not a lasting grant.</text>
+  <path d="M 810 1076 L 905 1076" class="edge"/>
+
+  <text x="50" y="1215" class="body">Implemented here: fixture selection, contract checks, arithmetic and a deterministic composer.</text>
+  <text x="50" y="1244" class="small">No live enterprise SSO, connected source queries, deployed LLM inference or production isolation is demonstrated.</text>
+</svg>

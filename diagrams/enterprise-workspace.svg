@@ -1,0 +1,106 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="1190" viewBox="0 0 1440 1190" role="img" aria-labelledby="title desc">
+  <title id="title">Enterprise IQ workspace architecture: viewing, context retrieval and structured analysis</title>
+  <desc id="desc">An employee workspace supplies caller identity and question scope to a separate authorization boundary. Discovery and viewing lead to BI sources. Knowledge adapters supply permission-filtered evidence. Approved structured query plans retain source controls and return verified numeric results from data platforms. Only permitted evidence and results join in a source-linked answer. All six platforms are target adapters, and local reference examples use synthetic permissions.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M 0 0 L 10 5 L 0 10 Z" fill="#52647e"/></marker>
+    <marker id="context-arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M 0 0 L 10 5 L 0 10 Z" fill="#147b76"/></marker>
+    <style>
+      text { font-family: Arial, Helvetica, sans-serif; fill: #14243d; }
+      .title { font-size: 31px; font-weight: 700; }
+      .subtitle { font-size: 19px; fill: #52647e; }
+      .label { font-size: 22px; font-weight: 700; }
+      .body { font-size: 19px; }
+      .small { font-size: 17px; fill: #52647e; }
+      .path { font-size: 22px; font-weight: 700; fill: #4145b0; }
+      .white { fill: #ffffff; }
+      .card { fill: #ffffff; stroke: #c8d0df; stroke-width: 2; }
+      .source { fill: #f1f9f8; stroke: #147b76; stroke-width: 2; }
+      .edge { fill: none; stroke: #52647e; stroke-width: 2.5; marker-end: url(#arrow); }
+      .context-edge { fill: none; stroke: #147b76; stroke-width: 2.5; marker-end: url(#context-arrow); }
+    </style>
+  </defs>
+
+  <rect width="1440" height="1190" fill="#ffffff"/>
+  <text x="55" y="53" class="title">Enterprise IQ · one workspace, three distinct paths</text>
+  <text x="55" y="88" class="subtitle">Product-direction architecture · local examples use synthetic permissions and data</text>
+
+  <rect x="55" y="122" width="1330" height="95" rx="14" fill="#14243d"/>
+  <text x="80" y="158" class="label white">Employee workspace</text>
+  <text x="80" y="191" class="body white">Home  ·  Analytics Catalog  ·  Knowledge  ·  Ask IQ  ·  My Workspace</text>
+
+  <rect x="55" y="236" width="1025" height="53" rx="10" fill="#4145b0"/>
+  <text x="80" y="270" class="body white">Authenticated caller + selected scope · permissions enforced outside intelligence</text>
+  <path d="M 565 289 L 565 318" class="edge"/>
+  <text x="1120" y="280" class="label">Authoritative sources</text>
+
+  <rect x="55" y="320" width="1025" height="794" rx="16" fill="#f6f7ff" stroke="#4145b0" stroke-width="2.5" stroke-dasharray="10 7"/>
+  <text x="80" y="351" class="small">AUTHORIZATION BOUNDARY · fail closed; filter evidence; recheck access on reuse</text>
+
+  <text x="90" y="392" class="path">A · Discover and view</text>
+  <rect x="90" y="412" width="270" height="103" rx="11" class="card"/>
+  <text x="110" y="448" class="label">Authorized catalog</text>
+  <text x="110" y="481" class="body">Search + asset metadata</text>
+  <rect x="405" y="412" width="270" height="103" rx="11" class="card"/>
+  <text x="425" y="448" class="label">Report workspace</text>
+  <text x="425" y="481" class="body">Definitions + freshness</text>
+  <rect x="720" y="412" width="270" height="103" rx="11" class="card"/>
+  <text x="740" y="448" class="label">Supported viewing</text>
+  <text x="740" y="481" class="body">Embed or native open</text>
+  <path d="M 360 463 L 405 463" class="edge"/>
+  <path d="M 675 463 L 720 463" class="edge"/>
+  <path d="M 990 463 L 1120 463" class="edge"/>
+  <text x="90" y="542" class="small">Viewing permissions are distinct from query/export permissions. Report pixels do not supply model data.</text>
+  <rect x="1120" y="412" width="265" height="103" rx="11" class="source"/>
+  <text x="1140" y="448" class="label">BI · targets</text>
+  <text x="1140" y="481" class="body">Power BI · Looker</text>
+
+  <text x="90" y="588" class="path">B · Retrieve documentation and context</text>
+  <rect x="90" y="608" width="270" height="111" rx="11" class="card"/>
+  <text x="110" y="645" class="label">Selected evidence</text>
+  <text x="110" y="678" class="body">Permitted text + citations</text>
+  <rect x="405" y="608" width="270" height="111" rx="11" class="card"/>
+  <text x="425" y="645" class="label">Filtered retrieval</text>
+  <text x="425" y="678" class="body">Permissions + versions</text>
+  <rect x="720" y="608" width="270" height="111" rx="11" class="card"/>
+  <text x="740" y="645" class="label">Approved adapters</text>
+  <text x="740" y="678" class="body">Content + metadata</text>
+  <path d="M 405 663 L 360 663" class="context-edge"/>
+  <path d="M 720 663 L 675 663" class="context-edge"/>
+  <path d="M 1120 663 L 990 663" class="context-edge"/>
+  <rect x="1120" y="608" width="265" height="111" rx="11" class="source"/>
+  <text x="1140" y="645" class="label">Knowledge</text>
+  <text x="1140" y="678" class="body">Confluence · SharePoint</text>
+
+  <text x="90" y="766" class="path">C · Analyze governed structured data</text>
+  <rect x="90" y="786" width="270" height="111" rx="11" class="card"/>
+  <text x="110" y="823" class="label">Scope + definition</text>
+  <text x="110" y="856" class="body">Compatible metric contract</text>
+  <rect x="405" y="786" width="270" height="111" rx="11" class="card"/>
+  <text x="425" y="823" class="label">Approved query plan</text>
+  <text x="425" y="856" class="body">Read-only + bounded</text>
+  <rect x="720" y="786" width="270" height="111" rx="11" class="card"/>
+  <text x="740" y="823" class="label">Governed reads</text>
+  <text x="740" y="852" class="small">Source-enforced data access</text>
+  <text x="740" y="879" class="small">Retain row/column policies</text>
+  <path d="M 360 841 L 405 841" class="edge"/>
+  <path d="M 675 841 L 720 841" class="edge"/>
+  <path d="M 990 841 L 1120 841" class="edge"/>
+  <rect x="1120" y="786" width="265" height="111" rx="11" class="source"/>
+  <text x="1140" y="823" class="label">Data · targets</text>
+  <text x="1140" y="856" class="body">Snowflake · Databricks</text>
+
+  <rect x="560" y="929" width="430" height="71" rx="11" class="card"/>
+  <text x="580" y="959" class="label">Verified result + provenance</text>
+  <text x="580" y="984" class="small">Deterministic numerical checks</text>
+  <path d="M 1252 897 L 1252 964 L 990 964" class="edge"/>
+  <path d="M 90 663 L 73 663 L 73 1056 L 390 1056" class="context-edge"/>
+  <text x="245" y="1027" class="small">Permitted context</text>
+  <path d="M 775 1000 L 775 1022" class="edge"/>
+
+  <rect x="390" y="1022" width="600" height="76" rx="11" fill="#147b76"/>
+  <text x="410" y="1054" class="label white">Source-linked answer</text>
+  <text x="410" y="1081" class="body white">Deterministic reference · citations to permitted sources</text>
+
+  <text x="55" y="1153" class="body">Target adapters are not connected. Synthetic authorization does not establish enterprise isolation.</text>
+  <text x="55" y="1179" class="small">Metric contracts retain period, currency, entity, grain, filters, aggregation, definition version, freshness and provenance.</text>
+</svg>
