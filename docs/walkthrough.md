@@ -6,13 +6,25 @@
 
 A Finance analyst finds $1,840,000 in a finance report and $2,000,000 in a sales report. Both figures can be correct: Finance reports **net revenue**, while Sales reports **gross revenue**. The investigation needs the definitions, the credits assigned to the period, and current evidence before explaining the difference.
 
-## Before and after
+## Employee journey: do the work
 
 **Before:** the employee locates two reports separately, finds each metric definition, checks the close note for period treatment, and seeks refresh evidence. A report title or screenshot alone cannot establish that the figures are comparable.
 
-**Proposed workspace:** search returns permitted report assets with purpose, owner and freshness. The report workspace connects definitions and related documentation. Ask IQ uses the selected business scope to assemble allowed evidence, check its meaning, and return an explanation with source references. Supported viewing preserves the report experience; it does not transfer chart contents into a model.
+**Product direction:** the employee opens the Finance landing page, searches authorized reports, and opens the Finance report inside Enterprise IQ using the proposed Power BI organization-embedding adapter. They can use supported filters/pages/slicers and expand the report. Related material stays available on demand without permanently crowding the report.
 
-This is a user journey illustration, with no measured time savings or adoption claim. The executable subset is the [deterministic reference composer](../examples/evidence-composer.mjs), not a live workspace or LLM.
+They open the revenue definition, select the approved credits query in Data Explorer, supply September and the US entity, and inspect the returned table. Progress, cancellation, pagination, column types, USD-cent units, freshness, and completeness remain visible. Viewing a table is a separate action from server completion. An uncertain submission response resumes the existing execution instead of silently creating another query.
+
+Next they consult the close note, ask a scoped IQ question, inspect its evidence, and save the investigation. Definitions, documentation, querying, and IQ are optional steps; an employee may revisit a report or stop after reading a definition. Unsupported documentation or report functions use an authorized native-open handoff. Later activity in that native platform is outside the host's observation.
+
+This is a journey illustration, with no measured time savings or adoption claim. The [integrated CLI](../examples/working-experience.mjs) resolves configuration, executes a mock query, projects events, and calls the original [deterministic composer](../examples/evidence-composer.mjs). No live embed, warehouse, document renderer, browser interaction, or LLM is implemented. Report viewing does not authorize model access to the underlying dataset; query and context checks remain separate.
+
+## Administrator journey: improve the workspace
+
+An authorized administrator opens Usage Analytics and notices repeated observed searches with zero visible results. They inspect aggregate counts, missing-result coverage, and approved category/navigation context, not raw search text or employee rankings. Small groups remain suppressed. A supported follow-up might ask employees about terminology through a separately approved research process.
+
+In Experience Settings they preview a Finance navigation label or curated collection change, validate locks and allowed modules, and publish a new version. Preview sessions are excluded from ordinary adoption analysis. Each subsequent event carries its effective experience configuration version. An earlier configuration could be restored as a new published version with an inspectable history; the release demonstrates resolution, not a persistent publishing service.
+
+They compare equivalent observation windows and compatible instrumentation: zero-result rate, matched search-to-render latency with sample and missing-outcome counts, and query completion versus results viewed. Optional paths and loopbacks remain visible. An apparent improvement is a descriptive association; seasonality, audience, access, and coverage changes can explain it. Controlled evaluation would be required for a causal claim. See [metric definitions and privacy](journey-telemetry.md) and the [configuration rules](experience-and-customization.md).
 
 ## Fix the scope before comparing
 

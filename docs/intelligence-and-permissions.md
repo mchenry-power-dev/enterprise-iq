@@ -26,6 +26,14 @@ These are design requirements for a future integration, not claims that enterpri
 
 Indexing does not make permissions automatically current. Azure AI Search's documented native token-based ACL approaches are preview features and evaluate synchronized permission metadata. Snowflake Cortex Search executes with owner's rights; source-table policies must not be assumed to propagate as each caller's entitlement. These limitations inform the design without committing this reference to either service. [Azure AI Search document access](https://learn.microsoft.com/en-us/azure/search/search-document-level-access-overview), [Cortex Search privilege model](https://docs.snowflake.com/en/user-guide/snowflake-cortex/cortex-search/cortex-search-overview).
 
+## Preferences, execution, and telemetry
+
+Experience configuration is presentation data. Organization locks, module allowlists, and source visibility constrain personal preferences; they never grant data access, change a source role, or disable backend checks. The local resolver's synthetic access projection is not an identity provider. Production source credentials and trust context cannot originate in a client-supplied role or tenant field.
+
+The mock query session authorizes submission and every later poll, page, and export against fresh synthetic context. Approved templates and strict parameters define its scope; no SQL-prefix regex claims arbitrary SQL is safe. Bind actual source execution to the intended identity, relevant row/column controls, bounded resources, and isolated results before replacing the mock. A saved result cursor is not an entitlement. Partial query rows may support an explicitly partial display, but do not establish a complete reconciliation.
+
+Telemetry is an independently governed, nonessential stream. Project allowlisted event parameters before collection; never copy queries, result rows, filters, questions, answers, source URLs, identities, or SDK error details into routine analytics. Trusted server/adapter context supplies tenant and pseudonymous subject scope in the production design. The reference simulates that boundary. Usage analysis requires aggregate authorization, small-cohort protection, retention/deletion controls, and an explicit purpose; pseudonymous is not anonymous. See [journey telemetry](journey-telemetry.md).
+
 ## Evidence-bounded composition
 
 The [authorized question flow](../diagrams/authorized-question-flow.svg) makes policy checks precede selection and composition. In the reference, synthetic permission records control which fixtures can enter context. Contract checks and arithmetic then determine whether the allowed evidence supports the September revenue reconciliation. The output includes source references for permitted supporting evidence; an insufficient result does not enumerate denied sources.

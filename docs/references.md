@@ -27,6 +27,33 @@ The following first-party documentation was opened and reviewed on **2026-10-03*
 | [Azure AI Search: document-level access](https://learn.microsoft.com/en-us/azure/search/search-document-level-access-overview) | Security filters versus preview native ACL approaches; synchronized permissions and revocation limits. | 2026-10-03 |
 | [GitHub: repository READMEs](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-readmes) | Relative links/images and rendered heading anchors. | 2026-10-03 |
 
+## Experience release research
+
+The following additional first-party pages were opened and reviewed for this enhancement on **2026-10-03**. The adapter matrix records the resulting qualifications. These sources establish vendor mechanisms; **live tenant verification was NOT RUN**.
+
+| Official reference | Boundary / deployment assumption | Verified |
+| --- | --- | --- |
+| [Power BI secure portal embedding](https://learn.microsoft.com/en-us/power-bi/collaborate-share/service-embed-secure) | Simple secure iframe differs from SDK organization embedding; automatic authentication is not SDK-compatible. | 2026-10-03 |
+| [Power BI report settings](https://learn.microsoft.com/en-us/javascript/api/overview/powerbi/configure-report-settings) | Supported panes, layout, and settings; no unrestricted report styling promise. | 2026-10-03 |
+| [Power BI filters](https://learn.microsoft.com/en-us/javascript/api/overview/powerbi/control-report-filters) | Report/page/visual filter operations; not an authorization boundary. | 2026-10-03 |
+| [Power BI slicers](https://learn.microsoft.com/en-us/javascript/api/overview/powerbi/control-report-slicers) | Hierarchy slicer SDK 2.21 prerequisite; tuple slicers unsupported. | 2026-10-03 |
+| [Power BI page navigation](https://learn.microsoft.com/en-us/javascript/api/overview/powerbi/page-navigation) | Supported embedded page APIs. | 2026-10-03 |
+| [Power BI events](https://learn.microsoft.com/en-us/javascript/api/overview/powerbi/handle-events) | Initialization versus repeated render; error semantics; dataSelected coverage limits. | 2026-10-03 |
+| [Looker signed embedding](https://docs.cloud.google.com/looker/docs/signed-embedding) | Google Cloud core Embed edition; Looker original enablement; scoped identity and signing prerequisites. | 2026-10-03 |
+| [Looker Embed SDK](https://docs.cloud.google.com/looker/docs/embed-sdk-intro) | SDK 2 communication/navigation; distinct from server API; event order not guaranteed. | 2026-10-03 |
+| [Looker embedded events](https://docs.cloud.google.com/looker/docs/embedded-javascript-events) | Dashboard run/filter semantics, partial failures, origin/sender validation. | 2026-10-03 |
+| [Snowflake SQL API introduction](https://docs.snowflake.com/en/developer-guide/sql-api/intro) | Supports writes as well as reads; results partitioned; not a read-only security layer. | 2026-10-03 |
+| [Snowflake SQL API authentication](https://docs.snowflake.com/en/developer-guide/sql-api/authenticating) | OAuth/key-pair execution identity; credentials remain server responsibilities. | 2026-10-03 |
+| [Graph sitePage retrieval](https://learn.microsoft.com/en-us/graph/api/sitepage-get?view=graph-rest-1.0) | SharePoint Online, Graph v1.0, documented permissions and canvasLayout expansion; no complete native-page fidelity guarantee. | 2026-10-03 |
+| [GA4 events](https://support.google.com/analytics/answer/9322688?hl=en) | Named interactions and event parameters inspire a local enterprise-owned contract. | 2026-10-03 |
+| [GA4 key events](https://support.google.com/analytics/answer/9267568?hl=en) | Meaningful outcomes require declared interpretation; no tag/property created. | 2026-10-03 |
+| [GA4 funnel exploration](https://support.google.com/analytics/answer/9327974?hl=en) | Funnel definitions and sequencing; local journey modeling also preserves loopbacks/optional paths. | 2026-10-03 |
+| [GA4 single-page applications](https://developers.google.com/analytics/devguides/collection/ga4/single-page-applications) | Future optional virtual pageviews require duplicate avoidance. No export implemented. | 2026-10-03 |
+| [Google Analytics PII restrictions](https://support.google.com/analytics/answer/6366371?hl=en) | Future export needs explicit enterprise approval and safe fields; pseudonymous remains sensitive. | 2026-10-03 |
+| [Browser same-origin policy](https://developer.mozilla.org/en-US/docs/Web/Security/Defenses/Same-origin_policy) | Cross-origin frame inspection is constrained; supported messaging must validate sender/origin. | 2026-10-03 |
+
+**Unresolved:** exact tenant license/edition combinations, enabled source features, identity delegation, source policy tests, API/resource budgets, document fidelity, SDK version compatibility, and privacy/retention approval. Recheck these in a permitted deployment; documentation review cannot resolve them. The source matrix distinguishes local simulation from integration and lists fallback behavior.
+
 ## Original public assets
 
 McHenry Power owns the independently authored public architecture, prose, synthetic scenario, reference code, tests, and SVG diagrams in this repository. Vendor documentation informed capability boundaries; no vendor sample code, platform logo, stock image, or employer material was copied into the deliverables. Platform names identify target systems, not partnerships, certifications, endorsements, or connected integrations.

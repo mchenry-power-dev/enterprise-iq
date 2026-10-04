@@ -2,7 +2,7 @@
 
 [README](../README.md) · [Walkthrough](walkthrough.md) · [Permissions](intelligence-and-permissions.md) · [Adapter matrix](source-adapters.md)
 
-Enterprise IQ proposes one workspace for finding a report, understanding its metric, and asking a source-linked question. Source platforms keep their reports, data, and permissions. This release implements small synthetic reference examples; the workspace, adapters, enterprise identity, and LLM integration remain product direction.
+Enterprise IQ proposes one workspace for interacting with reports, querying governed data, consulting documentation, and asking a source-linked question. Enterprises configure that experience and use declared journey evidence to improve it. Source platforms keep their reports, data, and permissions. This release implements small synthetic reference examples; the workspace, live adapters, enterprise identity, and LLM integration remain product direction.
 
 ## Three paths with different responsibilities
 
@@ -12,7 +12,15 @@ The [main system diagram](../diagrams/enterprise-workspace.svg) separates viewin
 
 **B. Documentation and context retrieval:** source adapters → approved content/metadata with permissions and versions → permission-filtered retrieval → selected evidence. A proposed index holds only approved catalog metadata and documentation, including source references and authorization freshness. Permission checks precede retrieval output, snippets, citations, and context assembly. Native document access and retrieval authorization remain distinct responsibilities; indexed permissions need an explicit synchronization policy. [Azure AI Search access-control overview](https://learn.microsoft.com/en-us/azure/search/search-document-level-access-overview).
 
-**C. Structured analysis:** question scope → metric-definition resolution → approved read-only query plan → source-enforced data access → deterministic results with provenance. The plan fixes approved data products, parameters, filters, row limits, cost limits, and timeout. Structured results reach the composer only after authorization and completeness checks. Power BI semantic queries require separate read/build permissions; Databricks statement execution requires warehouse and data-object access. Viewing permission alone does not authorize this path. [Power BI Execute Queries](https://learn.microsoft.com/en-us/rest/api/power-bi/datasets/execute-queries), [Databricks SQL execution](https://docs.databricks.com/aws/en/dev-tools/sql-execution-tutorial).
+**C. Structured analysis:** Data Explorer or an approved question tool → allowlisted query template → validated parameters and trusted execution policy → source-enforced access → bounded typed results with provenance. Snowflake SQL API and Databricks Statement Execution are query interfaces, not full-workspace iframes. The plan fixes data products, role/warehouse, row and cost budgets, and timeout. Polling, cancellation, result partitions, and repeat-request behavior need source-specific adapters. Tables/chart inputs go to the employee; only separately authorized and complete evidence reaches the composer. Power BI semantic queries also require separate read/build permissions. [Power BI Execute Queries](https://learn.microsoft.com/en-us/rest/api/power-bi/datasets/execute-queries), [query adapter boundaries](source-adapters.md#query-execution).
+
+## Configuration and feedback paths
+
+The experience resolver applies organization → team → individual settings with locks, validation, and value provenance. Its output selects presentation and approved tools; authorization is a separate trusted input and must be freshly enforced by every backend operation. Changing a menu cannot grant a report or query. The [configuration reference](experience-and-customization.md) demonstrates two synthetic departments.
+
+The proposed measurement path is **host actions + supported embed events + server outcomes → validation/privacy projection → tenant-scoped collection → modeled journeys → authorized aggregate analysis → prioritized UX changes → versioned experience updates**. Security audits, query history, business results, and product analytics remain separately protected; opaque correlations can connect authorized investigations without copying sensitive payloads. Disabled or unavailable nonessential analytics must not block permitted work. See [event contract, coverage, and metrics](journey-telemetry.md).
+
+A cross-origin host cannot inspect all iframe activity. The adapter projects only supported events and checks message origin and sender; no raw SDK payload enters analytics. Unsupported observation is unknown, not zero usage. [Browser same-origin boundary](https://developer.mozilla.org/en-US/docs/Web/Security/Defenses/Same-origin_policy).
 
 ## Evidence and metric contract
 
@@ -45,6 +53,6 @@ Gross and net revenue are distinct metrics. Compare their accounting scope first
 
 ## Small reference, replaceable production components
 
-The executable stack is Node.js with standard-library modules and the built-in test runner. Synthetic fixtures model evidence selection, contract comparison, and deterministic answer composition. No source API or model is called.
+The executable stack is Node.js with standard-library modules and the built-in test runner. Synthetic fixtures model evidence selection, contract comparison, deterministic composition, configuration resolution, mock query sessions, and journey telemetry. The integrated CLI connects these examples. No source API, model, tracking endpoint, or application UI is deployed.
 
 A future implementation needs logical responsibilities for identity/policy, catalog and retrieval, approved query execution, and answer composition. Storage, search engine, hosting, and model provider should follow source requirements and validated workload needs. This reference does not select an infrastructure platform or imply a scale-tested deployment. See [validation and roadmap](validation-and-roadmap.md) for delivered checks and integration gates.
