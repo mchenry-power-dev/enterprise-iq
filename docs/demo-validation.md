@@ -20,8 +20,11 @@ Local release verification executed on **2026-10-05**. The clean rehearsal copie
 | Accessibility review | PASS within tested scope | 20 axe scans with no violations; dialog Escape/focus and semantic chart tables exercised across primary engines. |
 | Independent visual review | PASS | All 10 main pages at 1440/390 pixels; enlarged layouts, compact 320-pixel Home/report/query, and all eight gallery captures inspected. |
 | Lab performance | MEASURED | Three isolated cold loads; median observed LCP 1.716 seconds; CLS 0. See method below. |
-| Documentation rendering | PASS locally | 16 Markdown files, 156 relative links, and 24 tables; 64 page renders at 1000/360 pixels in light/dark; all three original SVGs at those profiles and native size. Zero gate failures; images visually inspected. No disclosures present. The local renderer approximates GitHub; 94 external URLs were not fetched. |
-| Public hosted acceptance | NOT RUN | Verify served commit and actual interactions after deployment. |
+| Documentation rendering | PASS locally | 16 Markdown files, 156 relative links, and 24 tables; 64 page renders at 1000/360 pixels in light/dark; all three original SVGs at those profiles and native size. Zero gate failures; images visually inspected. No disclosures present. The local renderer approximates GitHub; 98 external URLs were not fetched. |
+| Public hosted acceptance | **66 PASS; 0 failed; 9 intentionally skipped** | Clean contexts against the public Pages build on 2026-10-05; same browser matrix, including exports, reload, configuration, local analytics, recovery, and phone workflows. |
+| Public GitHub rendering | PASS | Actual GitHub rendering of README, gallery, guide, architecture, and validation at 1280/390 pixels in light/dark modes: 20 renders checked; screenshots reviewed for each page, images loaded, and no page-wide overflow. |
+
+On **2026-10-05**, the [live demo](https://mchenry-power-dev.github.io/enterprise-iq/) was verified against [release a909a650](https://github.com/mchenry-power-dev/enterprise-iq/commit/a909a650262c669534e094a7657c1a40eb050d4e) after [CI and Pages deployment succeeded](https://github.com/mchenry-power-dev/enterprise-iq/actions/runs/37328961693). The in-app release marker matched that exact commit. The hosted suite completed in 2.6 minutes. A separate ten-route runtime check observed 12 same-origin requests, no external or localhost requests, and no page errors. Hosted checks repeat the local journey definitions; their counts are not additional distinct journeys.
 
 ## Browser coverage and counting
 

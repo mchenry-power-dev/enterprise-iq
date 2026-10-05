@@ -8,7 +8,7 @@ Enterprise IQ brings interactive reports, governed sample queries, and business 
 **McHenry Power · Enterprise Analytics & Product Engineering**<br>
 **Interactive reference demo · Sample data · Simulated sources**
 
-**Try it locally:** [Quickstart](#run-and-inspect). Public deployment is pending; a verified live link will be added after hosted acceptance.
+**Live demo:** [Open Enterprise IQ](https://mchenry-power-dev.github.io/enterprise-iq/) · [Run locally](#run-and-inspect)
 
 [Demo guide](docs/demo-guide.md) · [Gallery](docs/product-gallery.md) · [Architecture](docs/demo-architecture.md) · [Executable examples](examples/README.md) · [Validation](docs/demo-validation.md)
 
