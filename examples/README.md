@@ -3,7 +3,7 @@
 From the repository root, using **Node.js 24 or later**:
 
 ```sh
-node --test
+node --test tests/*.test.mjs
 node examples/working-experience.mjs
 node examples/working-experience.mjs --telemetry-disabled
 node examples/evidence-composer.mjs

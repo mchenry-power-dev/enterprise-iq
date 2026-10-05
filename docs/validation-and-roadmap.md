@@ -1,10 +1,12 @@
 # Validation and roadmap
 
+**Historical reference release · 2026-10-03.** These results apply to the original documentation and dependency-free examples. For the subsequent browser application, use the separate [demo validation record](demo-validation.md).
+
 The experience release extends the existing documentation and Node.js standard-library reference package. It preserves the original permission-aware retrieval, metric contracts, and deterministic composer, and adds configuration, governed mock queries, and journey telemetry. No runtime dependencies are required.
 
 ## Reproduce the local checks
 
-Run `node --test`, `node examples/working-experience.mjs`, and `node examples/working-experience.mjs --telemetry-disabled` from the repository root. The [example guide](../examples/README.md) also preserves all seven composer scenarios. The integrated output connects executed configuration, mock query results, and separately authorized composition; its host/SDK actions are explicitly simulated. A separate three-subject event fixture demonstrates aggregate calculations and suppression.
+Run `node --test tests/*.test.mjs`, `node examples/working-experience.mjs`, and `node examples/working-experience.mjs --telemetry-disabled` from the repository root. The [example guide](../examples/README.md) also preserves all seven composer scenarios. The integrated output connects executed configuration, mock query results, and separately authorized composition; its host/SDK actions are explicitly simulated. A separate three-subject event fixture demonstrates aggregate calculations and suppression.
 
 The checks establish local behavior only. They do not verify enterprise authentication, source row/column policies, live APIs, model accuracy, deployed prompt-injection resistance, production scale, or regulatory compliance.
 
@@ -33,7 +35,7 @@ Local preview tooling and render images are excluded by `.gitignore`; they are n
 
 The README is the primary entry point. Supporting documents cover employee/admin journeys, enterprise customization, event contracts and calculations, distinct source paths, permissions, and source-backed capability limits. The updated main SVG and one new feedback-loop SVG complement the preserved authorized-question diagram. Six executable patterns and an integrated CLI derive behavior from synthetic inputs.
 
-Platform labels are target roles only. The package makes no network calls to enterprise systems, deploys no LLM, and creates no application UI. Public reference code does not become confidential because the repository has no license; this release does not grant a license or claim open-source reuse rights.
+Platform labels are target roles only. That historical reference package made no network calls to enterprise systems, deployed no LLM, and included no application UI. The subsequent [browser demo](demo-guide.md) adds the working synthetic interface while retaining the source and model boundaries. Public reference code does not become confidential because the repository has no license; neither release grants a license or claims open-source reuse rights.
 
 ## A staged integration direction
 

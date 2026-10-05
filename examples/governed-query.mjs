@@ -1,5 +1,7 @@
-import { randomUUID } from 'node:crypto';
 import { currentWindow } from './authorized-context.mjs';
+
+// Available in the supported Node runtime and browsers; identifiers convey no authority.
+const randomUUID = () => globalThis.crypto.randomUUID();
 
 /** Allowlisted mock templates, never caller-provided SQL or source identifiers. */
 export const QUERY_TEMPLATES = Object.freeze(['credits-by-period']);
@@ -128,9 +130,14 @@ export function createMockQueryExecutor({ readFixture, completeAfterPolls = 2, o
 export function createQuerySession({
   getTrustedContext, getPolicy, executor, clock = Date.now,
   maxRows = 100, maxPageSize = 25, timeoutMs = 30_000, maxExecutions = 128,
+  // Trusted adapter hooks extend the template contract without accepting caller SQL.
+  templates = QUERY_TEMPLATES, validateRequestParameters = validateParameters,
+  projectSourceResult = projectResult, requiredColumns = () => ['creditId', 'amountCents'],
 } = {}) {
-  if (![getTrustedContext, getPolicy, clock, executor?.start, executor?.poll, executor?.cancel]
+  if (![getTrustedContext, getPolicy, clock, executor?.start, executor?.poll, executor?.cancel,
+    validateRequestParameters, projectSourceResult, requiredColumns]
     .every(value => typeof value === 'function') ||
+    !Array.isArray(templates) || !templates.length || templates.some(value => !token(value)) ||
     !Number.isInteger(maxRows) || maxRows < 1 || maxRows > 1_000 ||
     !Number.isInteger(maxPageSize) || maxPageSize < 1 || maxPageSize > 100 ||
     !Number.isSafeInteger(timeoutMs) || timeoutMs < 1 || timeoutMs > 300_000 ||
@@ -163,7 +170,7 @@ export function createQuerySession({
       Array.isArray(grant.templateIds) && grant.templateIds.includes(templateId) &&
       Array.isArray(grant.entities) && grant.entities.includes(parameters.entity) &&
       Array.isArray(grant.periods) && grant.periods.includes(parameters.period) &&
-      Array.isArray(grant.columns) && ['creditId', 'amountCents'].every(column => grant.columns.includes(column)) &&
+      Array.isArray(grant.columns) && requiredColumns(templateId).every(column => grant.columns.includes(column)) &&
       (!exporting || grant.allowExport === true));
   }
 
@@ -218,13 +225,14 @@ export function createQuerySession({
   return {
     submit(request) {
       if (!exactKeys(request, ['requestId', 'templateId', 'parameters']) || !token(request.requestId) ||
-          !QUERY_TEMPLATES.includes(request.templateId) || !validateParameters(request.parameters)) {
+          !templates.includes(request.templateId) || !validateRequestParameters(request.parameters, request.templateId)) {
         return failure('invalid_request');
       }
       const auth = trusted();
       if (!permitted(auth, request.templateId, request.parameters)) return failure('not_authorized_or_unavailable');
       const key = JSON.stringify([auth.context.tenantId, auth.context.subjectId, request.requestId]);
-      const fingerprint = JSON.stringify([request.templateId, request.parameters.entity, request.parameters.period]);
+      const fingerprint = JSON.stringify([request.templateId, Object.keys(request.parameters).sort()
+        .map(key => [key, request.parameters[key]])]);
       const prior = requests.get(key);
       if (prior) {
         if (prior.fingerprint !== fingerprint) return failure('idempotency_conflict');
@@ -262,7 +270,7 @@ export function createQuerySession({
         if (TERMINAL.has(execution.status)) return snapshot(execution);
         const { auth } = current;
         if (update?.status === 'succeeded') {
-          execution.result = projectResult(update.result, execution.parameters, maxRows, auth.now);
+          execution.result = projectSourceResult(update.result, execution.parameters, maxRows, auth.now, execution.templateId);
           stop(execution, 'succeeded', auth.now);
         } else if (update?.status === 'running' || update?.status === 'pending') {
           // Once running, an older pending status must not regress the session.

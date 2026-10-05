@@ -1,11 +1,11 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 794" role="img" aria-labelledby="title desc">
 <title id="title">Enterprise IQ: work, customize, improve</title>
-<desc id="desc">Proposed employee experience crosses a permission boundary through distinct report viewing, governed query results, and documentation paths. Separately authorized evidence supports Ask IQ. Safe events feed aggregate usage analysis and versioned experience changes. All source adapters are targets; the implemented examples are synthetic.</desc>
+<desc id="desc">The implemented synthetic workspace provides separate report, query, and documentation paths with local permission checks. Future live source adapters need source-enforced authorization. Permitted fixture evidence supports deterministic Ask IQ. Safe local events feed journey analysis and versioned experience changes. No enterprise source is connected.</desc>
 <defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0L8 4L0 8Z" fill="#61748c"/></marker></defs>
 <style>text{font-family:Arial,sans-serif;fill:#172b43}.title{font-size:26px;font-weight:700}.h{font-size:20px;font-weight:700}.b{font-size:17px}.small{font-size:15px}.line{fill:none;stroke:#61748c;stroke-width:2;marker-end:url(#arrow)}</style>
 <rect width="960" height="794" rx="18" fill="#f5f8fc"/>
 <text x="32" y="42" class="title">One working experience. Three access paths.</text>
-<text x="32" y="70" class="b">Product direction • synthetic reference examples • no live integrations</text>
+<text x="32" y="70" class="b">Interactive sample workspace • future connected adapters remain separate</text>
 <rect x="32" y="94" width="896" height="108" rx="12" fill="#142f4e"/>
 <text x="54" y="128" class="h" style="fill:#fff">EMPLOYEE WORKSPACE</text>
 <text x="54" y="157" class="b" style="fill:#fff">Home · Reports · Data Explorer · Knowledge · Ask IQ · My Workspace</text>
@@ -13,34 +13,34 @@
 <path d="M480 203V228" class="line"/>
 <rect x="32" y="230" width="896" height="70" rx="10" fill="#e2f1ed" stroke="#398370" stroke-width="2"/>
 <text x="480" y="258" class="h" text-anchor="middle">AUTHORIZE EACH OPERATION BEFORE DISCLOSURE</text>
-<text x="480" y="283" class="b" text-anchor="middle">Source identity + object / row / column controls • recheck access on reuse</text>
+<text x="480" y="283" class="b" text-anchor="middle">Demo: synthetic checks • live target: source-enforced access • recheck on reuse</text>
 <path d="M176 301V328" class="line"/><path d="M480 301V328" class="line"/><path d="M784 301V328" class="line"/>
 <rect x="32" y="332" width="288" height="174" rx="12" fill="#fff" stroke="#b4c7de"/>
 <text x="50" y="364" class="h">Interactive reports</text>
 <text x="50" y="393" class="b">Power BI / Looker</text>
-<text x="50" y="424" class="b">Authenticated SDK embeds</text>
-<text x="50" y="451" class="b">Supported pages and filters</text>
+<text x="50" y="424" class="b">Live target: SDK embeds</text>
+<text x="50" y="451" class="b">Demo: local pages / filters</text>
 <text x="50" y="483" class="small">Native-open exceptions are explicit</text>
 <rect x="336" y="332" width="288" height="174" rx="12" fill="#fff" stroke="#b4c7de"/>
 <text x="354" y="364" class="h">Governed query results</text>
 <text x="354" y="393" class="b">Snowflake / Databricks</text>
-<text x="354" y="424" class="b">Templates → SQL APIs</text>
-<text x="354" y="451" class="b">Typed tables / chart inputs</text>
+<text x="354" y="424" class="b">Live target: SQL APIs</text>
+<text x="354" y="451" class="b">Demo: typed local results</text>
 <text x="354" y="483" class="small">Bounded results • cancel • pagination</text>
 <rect x="640" y="332" width="288" height="174" rx="12" fill="#fff" stroke="#b4c7de"/>
 <text x="658" y="364" class="h">Documentation</text>
 <text x="658" y="393" class="b">Confluence / SharePoint</text>
-<text x="658" y="424" class="b">Permitted API retrieval</text>
-<text x="658" y="451" class="b">Sanitized supported content</text>
+<text x="658" y="424" class="b">Live target: API retrieval</text>
+<text x="658" y="451" class="b">Demo: original sample prose</text>
 <text x="658" y="483" class="small">Source links • version • freshness</text>
 <path d="M480 507V532" class="line"/><path d="M784 507V520H710V532" class="line"/>
 <rect x="32" y="536" width="896" height="76" rx="12" fill="#edf0fb" stroke="#a8b3d8"/>
 <text x="54" y="567" class="h">Ask IQ: separately authorized, minimal evidence + checked metric contracts</text>
 <text x="54" y="593" class="b">A report view does not grant dataset/model access. Delivered composer is deterministic.</text>
-<text x="32" y="644" class="small">INTENTIONAL MEASUREMENT • host actions + supported embed events + server outcomes</text>
+<text x="32" y="644" class="small">LOCAL SAMPLE EVENTS • live SDK and server event adapters remain integration work</text>
 <rect x="32" y="662" width="268" height="70" rx="10" fill="#e2f1ed" stroke="#8cb6aa"/>
 <text x="166" y="691" class="h" text-anchor="middle">Privacy projection</text>
-<text x="166" y="716" class="small" text-anchor="middle">Safe fields → tenant-scoped events</text>
+<text x="166" y="716" class="small" text-anchor="middle">Safe fields → scoped local events</text>
 <path d="M302 697H331" class="line"/>
 <rect x="336" y="662" width="288" height="70" rx="10" fill="#e2f1ed" stroke="#8cb6aa"/>
 <text x="480" y="691" class="h" text-anchor="middle">Usage Analytics</text>
@@ -50,5 +50,5 @@
 <text x="784" y="691" class="h" text-anchor="middle">Experience Settings</text>
 <text x="784" y="716" class="small" text-anchor="middle">Prioritize → publish → evaluate ↺</text>
 <path d="M929 697H945V148H931" class="line" stroke-dasharray="5 4"/>
-<text x="32" y="767" class="b">Feedback informs the next workspace version. No real tracking or external collection here.</text>
+<text x="32" y="767" class="b">Synthetic journeys + optional browser-local recording. Nothing goes to an analytics service.</text>
 </svg>

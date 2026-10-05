@@ -1,4 +1,4 @@
-import { createHash } from 'node:crypto';
+import { sha256 } from './sha256.mjs';
 
 /** Presentation configuration only. Access below is a trusted SYNTHETIC input, not authentication. */
 const MODULES = ['home', 'reports', 'data-explorer', 'knowledge', 'ask-iq', 'my-workspace'];
@@ -130,6 +130,6 @@ export function resolveExperience(input) {
   }
 
   const versions = Object.fromEntries(['organization', 'team', 'individual'].map(name => [name, input[name].version]));
-  const digest = createHash('sha256').update(canonical({ schema: 1, versions, effective, provenance })).digest('hex').slice(0, 16);
+  const digest = sha256(canonical({ schema: 1, versions, effective, provenance })).slice(0, 16);
   return { status: 'resolved', experience_config_version: `exp-v1-${digest}`, effective, provenance, conflicts };
 }

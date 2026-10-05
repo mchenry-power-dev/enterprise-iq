@@ -2,7 +2,7 @@
 
 [README](../README.md) · [Walkthrough](walkthrough.md) · [Permissions](intelligence-and-permissions.md) · [Adapter matrix](source-adapters.md)
 
-Enterprise IQ proposes one workspace for interacting with reports, querying governed data, consulting documentation, and asking a source-linked question. Enterprises configure that experience and use declared journey evidence to improve it. Source platforms keep their reports, data, and permissions. This release implements small synthetic reference examples; the workspace, live adapters, enterprise identity, and LLM integration remain product direction.
+Enterprise IQ proposes one workspace for interacting with reports, querying governed data, consulting documentation, and asking a source-linked question. Enterprises configure that experience and use declared journey evidence to improve it. Source platforms keep their reports, data, and permissions. This repository implements small synthetic reference examples and an [interactive browser workspace](demo-architecture.md). Live adapters, enterprise identity, and LLM integration remain product direction.
 
 ## Three paths with different responsibilities
 
@@ -53,6 +53,6 @@ Gross and net revenue are distinct metrics. Compare their accounting scope first
 
 ## Small reference, replaceable production components
 
-The executable stack is Node.js with standard-library modules and the built-in test runner. Synthetic fixtures model evidence selection, contract comparison, deterministic composition, configuration resolution, mock query sessions, and journey telemetry. The integrated CLI connects these examples. No source API, model, tracking endpoint, or application UI is deployed.
+The executable stack is Node.js with standard-library modules and the built-in test runner. Synthetic fixtures model evidence selection, contract comparison, deterministic composition, configuration resolution, mock query sessions, and journey telemetry. The integrated CLI connects these examples. The [browser application](demo-architecture.md) now reuses these patterns in a React/TypeScript demo. Source APIs, model inference, and a tracking endpoint are not connected; [demo validation](demo-validation.md) records browser and publication checks.
 
 A future implementation needs logical responsibilities for identity/policy, catalog and retrieval, approved query execution, and answer composition. Storage, search engine, hosting, and model provider should follow source requirements and validated workload needs. This reference does not select an infrastructure platform or imply a scale-tested deployment. See [validation and roadmap](validation-and-roadmap.md) for delivered checks and integration gates.

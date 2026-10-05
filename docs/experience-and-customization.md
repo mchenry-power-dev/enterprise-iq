@@ -1,6 +1,6 @@
 # Experience and customization
 
-**Customize the experience. Understand the journey. Improve how people work.** Enterprise IQ's product direction lets an organization shape the workspace around employee tasks while preserving source access checks. The implemented reference is a configuration resolver with synthetic Finance and Sales workspaces, not a settings screen or a deployed application.
+**Customize the experience. Understand the journey. Improve how people work.** Enterprise IQ's product direction lets an organization shape the workspace around employee tasks while preserving source access checks. The shared configuration resolver supports synthetic workspaces. The [interactive demo](demo-guide.md) now adds a settings screen, local draft/preview/publish/restore, and actual workspace presentation changes. See [demo validation](demo-validation.md) for publication status.
 
 ## Shape the workspace around the work
 
@@ -13,7 +13,7 @@ The default employee navigation is **Home · Reports · Data Explorer · Knowled
 | Report panels, permitted actions, saved-view defaults, Data Explorer | Keep useful tools near the report without crowding it | Allowlisted panel/action IDs, semantic view defaults, visibility setting |
 | Individual favorites and layout | Resume an investigation in a preferred arrangement | Personal preferences constrained by locks and current access projection |
 
-In the proposed report workspace, the report has the primary surface. Definitions, documentation, freshness and Ask IQ open on demand; an expand/fullscreen action restores space for the report. Labels and navigation must remain keyboard accessible. Source-supported interactions remain inside the report. Loading, denied, expired-session, unavailable and unsupported states need distinct explanations and recovery actions. These UI behaviors are product direction; this release does not render an embedded report.
+In the proposed report workspace, the report has the primary surface. Definitions, documentation, freshness and Ask IQ open on demand; an expand/fullscreen action restores space for the report. Labels and navigation must remain keyboard accessible. Source-supported interactions remain inside the report. Loading, denied, expired-session, unavailable and unsupported states need distinct explanations and recovery actions. The browser demo implements local filters, report pages, focus view, and on-demand context with original React reports. Live vendor embeds and their session recovery remain integration work.
 
 The shell and source embed are separate customization layers. A shell panel setting or `savedViewDefault: 'summary'` is an application preference, not a promise that an arbitrary report exposes that view or accepts every style/action. An adapter must validate supported capabilities and permissions; see the [source adapter boundaries](source-adapters.md). Native-open remains an explicit fallback where the requested in-platform task is unsupported.
 
@@ -49,7 +49,7 @@ This example accepts only fixed theme tokens and local application routes such a
 
 [Open the full-resolution diagram](../diagrams/experience-feedback-loop.svg).
 
-Product direction is an authorized administrator previewing a validated draft, reviewing effective settings and conflicts for representative roles, publishing a version, retaining its history and restoring an earlier configuration when appropriate. The resolver implements deterministic resolution and validation; persisted drafts, approval UI, history storage and publishing are future work. A test restores an earlier input snapshot and verifies identical resolved output.
+The [browser demo](demo-guide.md#customize-an-experience) implements local drafts, a distinct preview, publication, version history, and restoration as a new version. The standalone resolver implements deterministic resolution and validation; its tests also restore an earlier input snapshot and verify identical resolved output. Real administrative authorization, an organizational approval workflow, and shared server persistence remain production work. Browser-local publishing is a synthetic demonstration, not an enterprise control plane.
 
 Carry only `experience_config_version` into the [sanitized journey event contract](journey-telemetry.md), not favorite IDs, labels or configuration payloads. An administrator could inspect aggregate zero-result searches, improve terminology or navigation, publish a version and compare later observed journeys. Exclude preview/test sessions, respect small-cohort limits and coverage differences, and describe before/after differences as associations rather than causal improvements.
 

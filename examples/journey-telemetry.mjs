@@ -128,6 +128,8 @@ export function createTelemetryCollector({ enabled = true, now = () => new Date(
   return {
     host: (raw, context) => emit(raw, context, 'host'),
     server: (raw, context) => emit(raw, context, 'server'),
+    // Original sample-chart instrumentation only; this is NOT a vendor SDK adapter.
+    sampleEmbed: (raw, context) => emit(raw, context, 'embed'),
     embed(message, binding, context, delivery) {
       if (disabled(context)) return { status: 'disabled' };
       // Simulated browser MessageEvent: exact origin AND Window identity, never a payload claim.

@@ -1,0 +1,75 @@
+name: Validate and publish demo
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: pages-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-node@v6
+        with:
+          node-version: '24'
+          cache: npm
+          cache-dependency-path: demo/package-lock.json
+      - name: Clean install
+        run: npm --prefix demo ci
+      - name: Original reference tests
+        run: npm --prefix demo run test:reference
+      - name: Type check
+        run: npm --prefix demo run typecheck
+      - name: Demo domain tests
+        run: npm --prefix demo test
+      - name: Build static application
+        run: npm --prefix demo run build
+      - name: Install browser engines
+        working-directory: demo
+        run: npx playwright install --with-deps chromium firefox webkit
+      - name: Desktop and mobile browser acceptance
+        run: npm --prefix demo run test:e2e
+      - name: Documentation links and rendered layouts
+        run: npm --prefix demo run check:docs
+      - name: Retain browser evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: browser-evidence
+          path: |
+            .local/browser-report
+            .local/browser-results
+            .local/docs-review
+          include-hidden-files: true
+          retention-days: 7
+      - name: Upload built application only
+        if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: demo/dist
+
+  deploy:
+    if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
+    needs: validate
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy validated artifact
+        id: deployment
+        uses: actions/deploy-pages@v4

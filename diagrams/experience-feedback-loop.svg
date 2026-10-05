@@ -3,10 +3,10 @@
 <defs><marker id="a" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0L8 4L0 8Z" fill="#61748c"/></marker></defs>
 <style>text{font-family:Arial,sans-serif;fill:#172b43}.title{font-size:26px;font-weight:700}.h{font-size:20px;font-weight:700}.b{font-size:17px}.s{font-size:15px}.line{fill:none;stroke:#61748c;stroke-width:2;marker-end:url(#a)}</style>
 <rect width="960" height="610" rx="18" fill="#f5f8fc"/><text x="32" y="42" class="title">Do the work. Improve the workspace.</text>
-<text x="32" y="72" class="b">Synthetic Finance investigation • product-direction journey, not an implemented UI</text>
+<text x="32" y="72" class="b">Working synthetic browser journey • simulated sources • no live LLM</text>
 <text x="32" y="110" class="h">EMPLOYEE</text>
 <rect x="32" y="130" width="278" height="114" rx="12" fill="#fff" stroke="#b4c7de"/>
-<text x="50" y="161" class="h">Open Finance → report</text><text x="50" y="192" class="b">Find and interact in place</text><text x="50" y="221" class="s">Supported authenticated BI surface</text>
+<text x="50" y="161" class="h">Open Finance → report</text><text x="50" y="192" class="b">Find and interact in place</text><text x="50" y="221" class="s">Original interactive sample report</text>
 <path d="M312 187H333" class="line"/>
 <rect x="336" y="130" width="288" height="114" rx="12" fill="#fff" stroke="#b4c7de"/>
 <text x="354" y="161" class="h">Definition → credits query</text><text x="354" y="192" class="b">Run an approved template</text><text x="354" y="221" class="s">View typed rows, units, completeness</text>
@@ -17,7 +17,7 @@
 <text x="480" y="297" class="b" text-anchor="middle">Optional steps and loopbacks • native handoff ends observation, not necessarily the task</text>
 <path d="M480 310V332" class="line"/>
 <rect x="32" y="336" width="896" height="66" rx="10" fill="#142f4e"/>
-<text x="480" y="363" class="h" text-anchor="middle" style="fill:#fff">Validate + minimize → scoped event journey → authorized aggregates</text>
+<text x="480" y="363" class="h" text-anchor="middle" style="fill:#fff">Validate + minimize → scoped event journey → descriptive metrics</text>
 <text x="480" y="388" class="s" text-anchor="middle" style="fill:#c8dbed">No raw search, SQL, results, filters, questions, answers, identities, or full URLs</text>
 <text x="32" y="438" class="h">ADMINISTRATOR</text>
 <rect x="32" y="454" width="278" height="98" rx="12" fill="#e2f1ed" stroke="#8cb6aa"/>

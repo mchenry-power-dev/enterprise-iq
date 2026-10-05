@@ -2,7 +2,7 @@
 
 [README](../README.md) · [Walkthrough](walkthrough.md) · [Customization](experience-and-customization.md) · [Journey analytics](journey-telemetry.md)
 
-**One workspace to view reports, query data, and understand the business.** Enterprise IQ™ proposes a customizable working experience with intentional journey measurement. This document describes product direction, not a deployed interface. McHenry Power independently authors this public reference.
+**One workspace to view reports, query data, and understand the business.** Enterprise IQ™ proposes a customizable working experience with intentional journey measurement. This document describes product direction. The [interactive reference demo](demo-guide.md) implements a bounded synthetic version; [demo validation](demo-validation.md) records its release status. McHenry Power independently authors this public reference.
 
 ## Employee navigation
 
@@ -45,8 +45,8 @@ The deterministic [composer](../examples/evidence-composer.mjs) checks the Finan
 
 ## Enterprise product ownership
 
-**Use, customize, improve:** department landing pages and approved tools shape the task; permitted personal preferences refine it; aggregate observed journeys inform later versions. Preview, publish, version history, and restore are product lifecycle intentions. The release implements resolution and validation, not an administration service.
+**Use, customize, improve:** department landing pages and approved tools shape the task; permitted personal preferences refine it; aggregate observed journeys inform later versions. The browser demo implements local preview, publish, version history, and restoration alongside the reference resolver and validator. Shared administrative services and enterprise approval workflows remain future integration work.
 
-Usage Analytics has Adoption, Journeys, Friction, and Experience Changes views. Its default should show a few core outcomes, a relevant trend, top friction, and coverage notes; advanced breakdowns are optional. Analyze the experience, not employee productivity rankings. Session time and model responses do not establish successful work. Fragmented sites can also be measured; the proposed benefit is a shared experience and intentional measurement architecture with declared blind spots.
+The browser demo's Usage Analytics has Overview, Journeys, Friction, and Experience Changes views. Its default shows a few core outcomes, top friction, and coverage notes; advanced breakdowns are optional. Analyze the experience, not employee productivity rankings. Session time and model responses do not establish successful work. Fragmented sites can also be measured; the proposed benefit is a shared experience and intentional measurement architecture with declared blind spots.
 
-Original diagrams represent logical responsibilities. No fictional product screenshots, employer implementation, partnership, certification, adoption result, or live deployment is asserted. [Evidence and release status](validation-and-roadmap.md).
+Original diagrams represent logical responsibilities. The [product gallery](product-gallery.md) shows the actual synthetic browser demo. No employer implementation, connected source integration, partnership, certification, or adoption result is asserted. [Evidence and release status](validation-and-roadmap.md).

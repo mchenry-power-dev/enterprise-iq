@@ -7,3 +7,7 @@ __pycache__/
 !.env.example
 Thumbs.db
 .DS_Store
+node_modules/
+demo/dist/
+demo/test-results/
+demo/playwright-report/

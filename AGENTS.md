@@ -10,7 +10,7 @@ This repository is the independently authored public work from packet `ENTERPRIS
 
 ## Evidence and release status
 
-- Delivered scope is architecture documentation and small executable reference examples with tests. The six named platforms are target adapters, not connected integrations.
+- Delivered scope includes architecture documentation, small dependency-free executable reference examples with tests, and an interactive static browser demo in demo/. The six named platforms are simulated target adapters, not connected integrations. Public deployment status is recorded separately in docs/demo-validation.md.
 - Distinguish implemented reference behavior, proposed product workflows, and future integration. No claims of live SSO, production authorization, deployed model inference, foundation-model training, scale validation, regulatory compliance, or measured business outcomes without approved evidence.
 - The answer composer is deterministic. Authorization is synthetic and enforced before context assembly; it does not establish enterprise isolation.
 - Cite first-party documentation for specific platform/API/identity claims, with verification dates. Record test and render results honestly; use `NOT RUN` when a check did not execute.

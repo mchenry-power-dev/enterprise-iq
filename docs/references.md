@@ -54,6 +54,27 @@ The following additional first-party pages were opened and reviewed for this enh
 
 **Unresolved:** exact tenant license/edition combinations, enabled source features, identity delegation, source policy tests, API/resource budgets, document fidelity, SDK version compatibility, and privacy/retention approval. Recheck these in a permitted deployment; documentation review cannot resolve them. The source matrix distinguishes local simulation from integration and lists fallback behavior.
 
+## Interactive demo research
+
+The following documentation was opened and reviewed for `ENTERPRISE-IQ-DEMO-03` on **2026-10-04**. This is a documentation review, not live tenant verification. The browser demo uses original local simulations; no vendor SDK is bundled and no enterprise API is called.
+
+| Official reference | Constraint retained in the demo and intended adapter boundary | Reviewed |
+| --- | --- | --- |
+| [Power BI organization embedding](https://learn.microsoft.com/en-us/power-bi/developer/embedded/embed-sample-for-your-organization) | Real organization embedding requires user sign-in, content access, and applicable licensing. The sample report does not establish any of these. | 2026-10-04 |
+| [Power BI JavaScript events](https://learn.microsoft.com/en-us/javascript/api/overview/powerbi/handle-events) | Initialization and rendering differ; renders can recur after interactions. Errors describe operations, and selection coverage is limited. | 2026-10-04 |
+| [Looker private embedding](https://docs.cloud.google.com/looker/docs/private-embedding) | Private embedded content requires authentication. Original local charts are not authenticated Looker embeds. | 2026-10-04 |
+| [Looker embedded events](https://docs.cloud.google.com/looker/docs/embedded-javascript-events) | Dashboard completion can occur when tiles fail. Supported messages need sender/origin validation and conservative interpretation. | 2026-10-04 |
+| [Snowflake SQL API](https://docs.snowflake.com/en/developer-guide/sql-api/intro) | Supports submission, polling, cancellation, and partitioned results, including write statements. Approved local templates do not establish warehouse security. | 2026-10-04 |
+| [Databricks Statement Execution](https://docs.databricks.com/aws/en/dev-tools/sql-execution-tutorial) | Warehouse/object access, timeout policy, cancellation, and result chunks require explicit adapter handling. The demo executes only fixtures. | 2026-10-04 |
+| [Confluence REST API v2](https://developer.atlassian.com/cloud/confluence/rest/v2/intro/) | Authentication, authorization, and cursor pagination remain production adapter responsibilities. Sample documents are original prose. | 2026-10-04 |
+| [Graph sitePage retrieval](https://learn.microsoft.com/en-us/graph/api/sitepage-get?view=graph-rest-1.0) | Authorized page retrieval and optional canvas layout expansion are distinct from complete SharePoint page fidelity. | 2026-10-04 |
+| [GitHub Pages](https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages) | Static hosting publishes the built browser application; no application server or warehouse execution is provided. | 2026-10-04 |
+| [Pages custom workflows](https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages) | Separate artifact creation from a gated deployment job with Pages and identity-token permissions. | 2026-10-04 |
+| [Playwright browsers](https://playwright.dev/docs/browsers) | Chromium, Firefox, and WebKit require compatible installed binaries; an unexecuted engine is not a pass. | 2026-10-04 |
+| [Playwright emulation](https://playwright.dev/docs/emulation) | Viewport, touch, and device emulation exercise browser profiles, not physical hardware. | 2026-10-04 |
+| [WCAG reflow](https://www.w3.org/WAI/WCAG22/Understanding/reflow.html) | Inspect 320 CSS-pixel reflow and text enlargement; contain necessary two-dimensional tables without page-wide overflow. | 2026-10-04 |
+| [WCAG target size minimum](https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html) | Minimum target sizing has explicit exceptions; the demo aims for comfortable approximately 44-pixel controls. No certification is claimed. | 2026-10-04 |
+
 ## Original public assets
 
 McHenry Power owns the independently authored public architecture, prose, synthetic scenario, reference code, tests, and SVG diagrams in this repository. Vendor documentation informed capability boundaries; no vendor sample code, platform logo, stock image, or employer material was copied into the deliverables. Platform names identify target systems, not partnerships, certifications, endorsements, or connected integrations.
